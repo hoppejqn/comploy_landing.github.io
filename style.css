@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'font_1_med';
+    src: url('fonts/medium_customfont1.ttf');
+}
+
+@font-face {
+    font-family: 'font_1_bold';
+    src: url('fonts/bold_customfont1.ttf');
+}
+
+#wrapper {
+    margin-left:auto;
+    margin-right:auto;
+    width:960px;
+}
+
+#video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1; /* Ensures video is behind other elements */
+}
+
+#video video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures video covers entire viewport */
+}
+
+body {
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    z-index: 1; /* Ensures content appears above the video */
+}
+
+#preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    width: 60vh;
+    border-radius: 30px;
+    border: 5px solid rgb(255, 255, 255);
+    position: relative;
+    backdrop-filter: blur(10px); /* Adds a blur to the background */
+    
+    padding: 0px;
+    margin: 0px;
+}
+
+#preview a {
+    font-family: 'font_1_bold', sans-serif;
+    font-size: xx-large;
+    color: white;
+    z-index: 1;
+    line-height: 50px;
+}
+
+#preview h1 {
+    font-family: 'font_1_bold', sans-serif;
+    font-size: large;
+    color: white;
+    z-index: 1;
+    line-height: auto;
+}
+
+#preview p {
+    font-family: 'font_1_med', sans-serif;
+    font-size: large;
+    color: white;
+    text-decoration:wavy;
+    z-index: 1;
+    line-height: 50px;
+    transition: color 0.3s ease-in-out;
+}
+
+#preview p:hover {
+    color: rgb(126, 197, 202)
+}
+
+#proyects-container {
+    margin-top: 5%;
+    padding: 5%;
+    display: flex;
+    width: auto;
+    border-radius: 30px;
+    background-color: transparent;
+    height: auto;
+    border: 5px solid rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: auto
+}
+
+#proyects-container a {
+    font-family: 'font_1_med', sans-serif;
+    font-size: large;
+}
+
+#cp {
+    font-family: 'font_1_med', sans-serif;
+    font-size: small;
+    position: absolute;
+    bottom: 5%;
+    left: 70%;
+    color: white;
+    z-index: 1;
+}
